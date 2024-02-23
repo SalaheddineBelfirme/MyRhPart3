@@ -1,0 +1,17 @@
+
+
+<app-index-navbar></app-index-navbar>
+
+<div class="min-h-screen bg-transparent opacity-3 shadow-2xl flex gap-3 mt-20">
+  <div class="w-full mt-2.5 text-center bg-blue-50">
+      <h1 class="text-lg font-semibold uppercase underline mb-4">Job offers</h1>
+      <app-job-offer-card *ngFor="let jobOffer of jobOffers" [jobOffer]="jobOffer"></app-job-offer-card>
+  </div>
+
+
+  <div class="w-1/3 min-h-screen sticky bg-white p-3">
+    <h1 class="text-lg font-semibold uppercase underline mb-3">Search engine</h1>
+    <app-search></app-search>
+  </div>
+
+</div>

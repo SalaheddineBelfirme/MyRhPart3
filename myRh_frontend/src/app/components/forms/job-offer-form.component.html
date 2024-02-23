@@ -1,0 +1,56 @@
+<div class="">
+<form [formGroup]="jobOfferForm" class="flex flex-col bg-inherit p-10 items-center ">
+  <mat-card class="flex flex-col w-[80%]">
+
+    <mat-card-header>
+      <mat-card-title >Add Job Offer </mat-card-title>
+      <mat-card-subtitle>Fill up the form to add a job offer request, this job offer will be validated by the admin to post it public</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="w-full flex flex-col">
+        <mat-form-field>
+          <mat-label>Job Title</mat-label>
+          <input matInput formControlName="title" placeholder="Job Title">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Description</mat-label>
+          <input matInput formControlName="description" placeholder="Job description...">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Salary in MAD</mat-label>
+          <input matInput formControlName="salary" placeholder="00.00 MAD">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Location</mat-label>
+          <input matInput formControlName="location" placeholder="City">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Profile</mat-label>
+          <input matInput formControlName="profile" placeholder="Job Profile">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Contract Type</mat-label>
+          <input matInput formControlName="contractType" placeholder="Type of Contract">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Education Level</mat-label>
+          <input matInput formControlName="educationLevel" placeholder="Bac + X">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Experience Level</mat-label>
+          <input matInput formControlName="experienceLevel" placeholder="Years of Experience">
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <div class="w-full ">
+      <button mat-raised-button class="w-full mb-4" style="background-color: #00ca99; color: white;" (click)="addJobOffer()">Register</button>
+      </div>
+    </mat-card-actions>
+    <div class="p-3">
+      <app-success-alert *ngIf="success"></app-success-alert>
+      <app-warning-alert *ngIf="error"></app-warning-alert>
+    </div>
+  </mat-card>
+</form>
+</div>

@@ -1,0 +1,45 @@
+
+<form [formGroup]="registerForm" class="flex flex-col bg-blue-50 p-10 items-center ">
+  <mat-card class="flex flex-col w-[80%]">
+    <mat-card-header>
+      <mat-card-title >Register</mat-card-title>
+      <mat-card-subtitle>Fill up the form to register your company</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="w-full flex flex-col">
+        <mat-form-field>
+          <mat-label>Company Name</mat-label>
+          <input matInput formControlName="name" placeholder="Company Name">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Phone Number</mat-label>
+          <input matInput formControlName="phone" placeholder="XXXX-XXXXXX">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" placeholder="Ex.email@gmail.com">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Password</mat-label>
+          <input matInput formControlName="password" placeholder="*********" name="password" required>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Address</mat-label>
+          <input matInput formControlName="address" placeholder="Address" name="address" required>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>City</mat-label>
+          <input matInput formControlName="city" placeholder="City" name="city" required>
+        </mat-form-field>
+        <div class="mat-form-field mb-3">
+          <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">Add logo file</label>
+          <input (change)="getFilePath($event)" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="file_input_help" id="file_input" type="file">
+          <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">SVG, PNG, JPG or GIF (MAX. 800x400px).</p>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button style="background-color: #00ca99; color: white;" (click)="register()">Register</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

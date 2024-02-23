@@ -1,0 +1,53 @@
+<app-index-navbar class="bg-transparent"></app-index-navbar>
+<main class="mt-18">
+  <div
+    class="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75"
+  >
+    <div
+      class="absolute top-0 w-full h-full bg-center bg-cover"
+      style="
+       background-image: url('assets/images/r.jpg');
+      "
+    >
+      <span
+        id="blackOverlay"
+        class="w-full h-full absolute opacity-75 bg-black"
+      ></span>
+    </div>
+    <div class="container relative mx-auto">
+      <div class="items-center flex flex-wrap">
+        <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+          <div class="pr-12">
+            <br><br><br><br>
+            <h1 class="text-white font-semibold text-5xl" style="margin-bottom: 2rem;">
+              Your future starts with us.
+            </h1>
+            <br><br><br><br>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+      <polygon points="2560 0 2560 100 0 100" style="fill: #00ca99;"></polygon>
+    </svg>
+  </div>
+    <div class="container mx-auto py-16">
+      <h2 class="text-3xl font-semibold text-gray-800 ">Explore Job Offers</h2>
+    </div>
+  <div class="min-h-screen bg-transparent opacity-3 shadow-2xl flex flex-wrap gap-3 mt-1">
+    <app-job-offer-card *ngFor="let jobOffer of jobOffers" [jobOffer]="jobOffer"></app-job-offer-card>
+  </div>
+</main>
+
+
+<footer class="relative bg-blueGray-800 pt-8 pb-6">
+    <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20" style="height: 80px;">
+
+  </div>
+
+</footer>
+
+
+
+

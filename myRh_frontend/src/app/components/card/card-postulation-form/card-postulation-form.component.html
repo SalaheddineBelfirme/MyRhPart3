@@ -1,0 +1,8 @@
+<form [formGroup]="postulationForm" (ngSubmit)="submitPostulation()">
+    <input type="file" formControlName="pdfFile" (change)="onFileChange($event)"/>
+    <input type="hidden" formControlName="jobOfferId" />
+    <button type="submit">Postuler</button>
+</form>
+
+<div *ngIf="success">Postulation soumise avec succès!</div>
+<div *ngIf="error">Une erreur s'est produite lors de la soumission de la postulation.</div>
